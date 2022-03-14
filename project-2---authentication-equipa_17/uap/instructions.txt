@@ -1,0 +1,24 @@
+CREATE VIRTUAL ENVIRONMENT: 
+
+python3 -m venv venv
+
+ACTIVATE VIRTUAL ENVIRONMENT:
+
+source venv/bin/activate
+
+INSTALL REQUIREMENTS: 
+
+pip install -r requirements.txt
+
+(Make sure flask and flask rest api are installed with sudo if you run into problems) 
+
+RUN APP (make sure you run with sudo): 
+
+sudo python3 app.py
+
+IMPORTANT NOTES:
+
+- In order to connect to the webapp the DNS must be the one presented by the docker when the app is running
+- Already existing account: 
+	Username: admin
+	Password: admin 

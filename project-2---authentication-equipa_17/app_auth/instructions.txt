@@ -1,0 +1,36 @@
+HOST: 0.0.0.0 PORT: 9001
+
+SETUP and INTRUCTIONS:
+
+docker-compose build
+
+docker-compose up
+
+docker exec -i [mysql_container_name] mysql -uroot -proot bookdb < [path/to/sql/file]
+
+NOTE: if there's an error when creating the database, verify if the same is inside the container. For that run: docker ps -> to see the id container of the mysql
+
+docker exec -it [idcontainer] bash
+
+mysql -uroot -proot
+
+create database bookdb;
+
+exit
+
+exit
+
+docker exec -i [mysql_container_name] mysql -uroot -proot bookdb < [path/to/sql/file]
+
+NOTE: in case of having trouble running both containers, delete the volumes
+
+docker volume ls
+
+docker volume rm [volume_name]
+
+***************************************************************************************************************
+
+IMPORTANT NOTES:
+
+- At the top of the www/auth.php file there's a field called "My Ip Address", the address must be the one in which the FLask API is running 
+- For that you must click Start Authentication in UAP's interface and check for the local address
